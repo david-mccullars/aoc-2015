@@ -12,6 +12,7 @@ use std::cmp::PartialOrd;
 use std::fmt::Debug;
 use std::fmt::Display;
 
+mod allocations;
 mod digits;
 mod direction;
 mod graph;
@@ -19,6 +20,7 @@ mod intcode;
 mod line_segment;
 mod maps;
 
+pub use allocations::*;
 #[allow(unused_imports)]
 pub use aoc_parse::{parser, prelude::*, ParseIter};
 pub use digits::*;
