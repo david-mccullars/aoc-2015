@@ -6,7 +6,7 @@
 | [Day 1](./src/bin/01.rs) | `6.4µs` | `1.3µs` |
 | [Day 2](./src/bin/02.rs) | `102.1µs` | `85.5µs` |
 | [Day 3](./src/bin/03.rs) | `183.7µs` | `188.8µs` |
-| [Day 4](./src/bin/04.rs) | `24.0ms` | `97.7ms` |
+| [Day 4](./src/bin/04.rs) | `3.7ms` | `12.9ms` |
 | [Day 5](./src/bin/05.rs) | `32.8µs` | `715.0µs` |
 | [Day 6](./src/bin/06.rs) | `19.4ms` | `18.8ms` |
 | [Day 7](./src/bin/07.rs) | `363.2µs` | `372.5µs` |
@@ -29,5 +29,5 @@
 | [Day 24](./src/bin/24.rs) | `8.6ms` | `2.0ms` |
 | [Day 25](./src/bin/25.rs) | `57.2ms` | `14.0ns` |
 
-**Total: 447.24ms**
+**Total: 342.14ms**
 <!--- benchmarking table --->

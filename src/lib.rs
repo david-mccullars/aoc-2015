@@ -2,6 +2,7 @@ extern crate aoc_parse;
 extern crate nalgebra;
 extern crate num;
 extern crate petgraph;
+extern crate rayon;
 extern crate tinyjson;
 
 pub mod template;
@@ -20,6 +21,7 @@ mod grid;
 mod intcode;
 mod line_segment;
 mod maps;
+mod md5;
 
 pub use allocations::*;
 #[allow(unused_imports)]
@@ -31,6 +33,7 @@ pub use grid::*;
 pub use intcode::*;
 pub use line_segment::*;
 pub use maps::*;
+pub use md5::*;
 
 #[allow(dead_code)]
 pub fn name_to_digit(s: &str) -> Option<u32> {

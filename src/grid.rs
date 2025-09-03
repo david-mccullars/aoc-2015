@@ -44,10 +44,7 @@ pub struct Grid {
 
 impl Grid {
     pub fn update(&mut self, c: char, pos: Pos) {
-        self.map
-            .entry(c)
-            .or_default()
-            .insert(pos);
+        self.map.entry(c).or_default().insert(pos);
     }
 
     pub fn update_bounds(&mut self, pos: &Pos) {
