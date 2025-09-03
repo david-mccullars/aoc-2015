@@ -6,25 +6,11 @@ use advent_of_code::*;
 advent_of_code::solution!(4);
 
 pub fn part_one(input: &str) -> Option<usize> {
-    mine(input.trim(), |b0, b1, b2| {
-        b0 == 0 && b1 == 0 && (b2 >> 4) == 0
-    })
+    md5_search(input, |d| d[0] == 0 && d[1] == 0 && (d[2] >> 4) == 0).next()
 }
 
 pub fn part_two(input: &str) -> Option<usize> {
-    mine(input.trim(), |b0, b1, b2| b0 == 0 && b1 == 0 && b2 == 0)
-}
-
-fn mine(prefix: &str, is_valid: fn(u8, u8, u8) -> bool) -> Option<usize> {
-    let mut context = md5::Context::new();
-    context.consume(prefix);
-    (1..).find(|n| {
-        let mut c2 = context.clone();
-        c2.consume(n.to_string());
-        let digest = c2.compute();
-        let bytes = &digest.as_slice()[0..=3];
-        is_valid(bytes[0], bytes[1], bytes[2])
-    })
+    md5_search(input, |d| d[0] == 0 && d[1] == 0 && d[2] == 0).next()
 }
 
 #[cfg(test)]
